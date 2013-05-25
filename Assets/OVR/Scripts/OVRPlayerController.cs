@@ -282,8 +282,6 @@ public class OVRPlayerController : OVRComponent
 				float leftAxisX = 
 				OVRGamepadController.GPC_GetAxis((int)OVRGamepadController.Axis.LeftXAxis);
 				
-	
-				
 				if(leftAxisY > 0.0f)
 		    		MoveThrottle += leftAxisY *
 					DirXform.TransformDirection(Vector3.forward * moveInfluence);
@@ -306,7 +304,7 @@ public class OVRPlayerController : OVRComponent
 			OVRGamepadController.GPC_GetAxis((int)OVRGamepadController.Axis.RightXAxis);
 			
 			// Rotate
-			YRotation += rightAxisX * rotateInfluence;    
+			//YRotation += rightAxisX * rotateInfluence;
 		}
 		
 		// Update cameras direction and rotation
