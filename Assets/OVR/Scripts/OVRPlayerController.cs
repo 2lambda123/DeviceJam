@@ -68,7 +68,7 @@ public class OVRPlayerController : OVRComponent
 	//
 	// STATIC VARIABLES
 	//
-	public static bool  AllowMouseRotation      = true;
+	public static bool  AllowMouseRotation      = false;
  	
 	// * * * * * * * * * * * * *
 	
@@ -252,9 +252,12 @@ public class OVRPlayerController : OVRComponent
 			// Move
 			
 			// Rotate
+			AllowMouseRotation = true;
 			float deltaRotation = 0.0f;
 			if(AllowMouseRotation == false)
+			{
 				deltaRotation = Input.GetAxis("Mouse X") * rotateInfluence * 3.25f;
+			}
 			
 			float filteredDeltaRotation = (sDeltaRotationOld * 0.0f) + (deltaRotation * 1.0f);
 			YRotation += filteredDeltaRotation;
@@ -319,7 +322,19 @@ public class OVRPlayerController : OVRComponent
 	public virtual void UpdatePlayerForwardDirTransform()
 	{
 		if ((DirXform != null) && (CameraController != null))
-			DirXform.rotation = CameraController.transform.rotation;
+		{
+			//DirXform.rotation = CameraController.transform.rotation;
+			
+			Transform[] Xforms = gameObject.GetComponentsInChildren<Transform>();
+		
+			for(int i = 0; i < Xforms.Length; i++)
+			{
+				if(Xforms[i].name == "ForwardDirection")
+				{
+					DirXform.rotation = Xforms[i].rotation;
+				}
+			}
+		}
 	}
 	
 	///////////////////////////////////////////////////////////
