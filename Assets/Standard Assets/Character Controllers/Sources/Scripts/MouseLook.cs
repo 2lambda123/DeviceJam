@@ -69,9 +69,6 @@ public class MouseLook : MonoBehaviour {
 	
 			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
 		}
-		
-		Debug.LogWarning("Joy X: "+ Xon);
-		Debug.LogWarning("Joy Y: "+ Yon);
 	}
 	
 	void Start ()

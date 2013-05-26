@@ -36,9 +36,10 @@ using System.Collections.Generic;
 // by the player.
 //
 public class OVRPlayerController : OVRComponent
-{
+{	
 	protected CharacterController 	Controller 		 = null;
 	protected OVRCameraController 	CameraController = null;
+	private bool sendFalse = true;
 
 	public float Acceleration 	   = 0.1f;
 	public float Damping 		   = 0.15f;
@@ -50,7 +51,17 @@ public class OVRPlayerController : OVRComponent
 	private float   MoveScale 	   = 1.0f;
 	private Vector3 MoveThrottle   = Vector3.zero;
 	private float   FallSpeed 	   = 0.0f;
-	
+
+	private bool currentServerMoveForward	= false;
+	private bool currentServerMoveLeft 		= false;
+	private bool currentServerMoveRight		= false;
+	private bool currentServerMoveBack		= false;
+
+	private bool clientMoveForward	= false;
+	private bool clientMoveLeft 	= false;
+	private bool clientMoveRight	= false;
+	private bool clientMoveBack		= false;
+
 	// Initial direction of controller (passed down into CameraController)
 	private Quaternion OrientationOffset = Quaternion.identity;			
 	// Rotation amount from inputs (passed down into CameraController)
@@ -72,6 +83,32 @@ public class OVRPlayerController : OVRComponent
  	
 	// * * * * * * * * * * * * *
 	
+	[RPC]
+	void SendMovementInput(bool mF, bool mL, bool mB, bool mR) 
+	{
+		if(Network.isServer){
+			Debug.Log("Server: " + mF + " " + mL + " " + mB + " " + mR);
+    	} else {
+    		Debug.Log("Client: " + mF + " " + mL + " " + mB + " " + mR);
+    	}
+    	currentServerMoveForward	= mF;
+		currentServerMoveLeft		= mL;
+		currentServerMoveBack		= mB;
+		currentServerMoveRight		= mR;
+	}
+	
+	[RPC]
+	void Enable(NetworkPlayer player) {
+    	if (player == Network.player) {
+        	enabled = true;
+		}
+	}
+
+	[RPC]
+	void MyDebug(string log) {
+    	Debug.Log(log);
+	}
+
 	// Awake
 	new public virtual void Awake()
 	{
@@ -126,6 +163,9 @@ public class OVRPlayerController : OVRComponent
 	// Update 
 	new public virtual void Update()
 	{
+		Debug.Log("Server = " + Network.isServer);
+		Debug.Log("Client = " + Network.isClient);
+		
 		base.Update();
 		
 		UpdateMovement();
@@ -136,6 +176,14 @@ public class OVRPlayerController : OVRComponent
 		MoveThrottle.x /= motorDamp;
 		MoveThrottle.y = (MoveThrottle.y > 0.0f) ? (MoveThrottle.y / motorDamp) : MoveThrottle.y;
 		MoveThrottle.z /= motorDamp;
+
+		if (Network.isServer) {
+			MyDebug("Server; MoveThrottle = " + MoveThrottle);
+		} else if (Network.isClient) {
+			networkView.RPC("MyDebug", RPCMode.Server, "Client; MoveThrottle = " + MoveThrottle);
+		}
+
+
 
 		moveDirection += MoveThrottle * DeltaTime;
 		
@@ -165,6 +213,17 @@ public class OVRPlayerController : OVRComponent
 		
 		Vector3 actualXZ = Vector3.Scale(Controller.transform.localPosition, new Vector3(1, 0, 1));
 		
+
+		if (Network.isServer) {
+			MyDebug("Server; predictedXZ = " + predictedXZ);
+			MyDebug("Server; actualXZ = " + actualXZ);
+		} else if (Network.isClient) {
+			networkView.RPC("MyDebug", RPCMode.Server, "Client; predictedXZ = " + predictedXZ);
+			networkView.RPC("MyDebug", RPCMode.Server, "Client; actualXZ = " + actualXZ);
+		}
+
+
+
 		if (predictedXZ != actualXZ)
 			MoveThrottle += (actualXZ - predictedXZ) / DeltaTime; 
 		
@@ -183,10 +242,10 @@ public class OVRPlayerController : OVRComponent
 		// Do not apply input if we are showing a level selection display
 		if(OVRMainMenu.sShowLevels == false)
 		{
-			bool moveForward = false;
-			bool moveLeft  	 = false;
-			bool moveRight   = false;
-			bool moveBack    = false;
+			clientMoveForward	= false;
+			clientMoveLeft		= false;
+			clientMoveRight		= false;
+			clientMoveBack		= false;
 				
 			MoveScale = 1.0f;
 			
@@ -194,22 +253,39 @@ public class OVRPlayerController : OVRComponent
 			// Keyboard input
 			
 			// Move
-			
+
 			// WASD
-			if (Input.GetKey(KeyCode.W)) moveForward = true;
-			if (Input.GetKey(KeyCode.A)) moveLeft	 = true;
-			if (Input.GetKey(KeyCode.S)) moveBack 	 = true; 
-			if (Input.GetKey(KeyCode.D)) moveRight 	 = true; 
+			if (Input.GetKey(KeyCode.W)) clientMoveForward	= true;
+			if (Input.GetKey(KeyCode.A)) clientMoveLeft		= true;
+			if (Input.GetKey(KeyCode.S)) clientMoveRight	= true; 
+			if (Input.GetKey(KeyCode.D)) clientMoveBack		= true; 
 			// Arrow keys
-			if (Input.GetKey(KeyCode.UpArrow))    moveForward = true;
-			if (Input.GetKey(KeyCode.LeftArrow))  moveLeft 	  = true;
-			if (Input.GetKey(KeyCode.DownArrow))  moveBack 	  = true; 
-			if (Input.GetKey(KeyCode.RightArrow)) moveRight   = true; 
+			if (Input.GetKey(KeyCode.UpArrow))    clientMoveForward	= true;
+			if (Input.GetKey(KeyCode.LeftArrow))  clientMoveLeft	= true;
+			if (Input.GetKey(KeyCode.DownArrow))  clientMoveRight	= true; 
+			if (Input.GetKey(KeyCode.RightArrow)) clientMoveBack	= true;
+				
+			if (Network.isServer && (clientMoveForward || clientMoveLeft || clientMoveBack || clientMoveRight || sendFalse))
+			{	
+				Debug.Log("Send as server");
+        		SendMovementInput(clientMoveForward, clientMoveLeft, clientMoveBack, clientMoveRight);
+        		if(clientMoveForward || clientMoveLeft || clientMoveBack || clientMoveRight)
+        			sendFalse = true;
+    		}
+			else if (Network.isClient && (clientMoveForward || clientMoveLeft || clientMoveBack || clientMoveRight || sendFalse))
+			{
+
+				Debug.Log("Send as client");
+        		networkView.RPC("SendMovementInput", RPCMode.Server, clientMoveForward, clientMoveLeft, clientMoveBack, clientMoveRight);
+        		if(clientMoveForward || clientMoveLeft || clientMoveBack || clientMoveRight)
+        			sendFalse = true;
+    		}
 			
-			if ( (moveForward && moveLeft) || (moveForward && moveRight) ||
-				 (moveBack && moveLeft)    || (moveBack && moveRight) )
+			if ((currentServerMoveForward && currentServerMoveLeft) || (currentServerMoveForward && currentServerMoveRight) || (currentServerMoveBack && currentServerMoveLeft)|| (currentServerMoveBack && currentServerMoveRight))
+			{
 				MoveScale = 0.70710678f;
-			
+			}
+
 			// No positional movement if we are in the air
 			if (!Controller.isGrounded)	
 				MoveScale = 0.0f;
@@ -225,14 +301,17 @@ public class OVRPlayerController : OVRComponent
 			
 			if(DirXform != null)
 			{
-				if (moveForward)
+				Debug.Log("Performing movement");
+				if (currentServerMoveForward)
 					MoveThrottle += DirXform.TransformDirection(Vector3.forward * moveInfluence);
-				if (moveBack)
+				if (currentServerMoveBack)
 					MoveThrottle += DirXform.TransformDirection(Vector3.back * moveInfluence) * BackAndSideDampen;
-				if (moveLeft)
+				if (currentServerMoveLeft)
 					MoveThrottle += DirXform.TransformDirection(Vector3.left * moveInfluence) * BackAndSideDampen;
-				if (moveRight)
+				if (currentServerMoveRight)
 					MoveThrottle += DirXform.TransformDirection(Vector3.right * moveInfluence) * BackAndSideDampen;
+			} else {
+				Debug.Log("DirXforce = null");
 			}
 			
 			// Rotate
@@ -244,9 +323,9 @@ public class OVRPlayerController : OVRComponent
 			if (Input.GetKey(KeyCode.Q)) 
 				YRotation -= rotateInfluence * 0.5f;  
 			if (Input.GetKey(KeyCode.E)) 
-				YRotation += rotateInfluence * 0.5f; 
-		
-			// * * * * * * * * * * *
+				YRotation += rotateInfluence * 0.5f;
+			
+						// * * * * * * * * * * *
 			// Mouse input
 			
 			// Move
@@ -270,8 +349,7 @@ public class OVRPlayerController : OVRComponent
 			moveInfluence = Acceleration * 0.1f * MoveScale * MoveScaleMultiplier;
 			
 			// Run!
-			moveInfluence *= 1.0f + 
-						     OVRGamepadController.GPC_GetAxis((int)OVRGamepadController.Axis.LeftTrigger);
+			moveInfluence *= 1.0f + OVRGamepadController.GPC_GetAxis((int)OVRGamepadController.Axis.LeftTrigger);
 			
 			// Move
 			if(DirXform != null)
@@ -283,21 +361,20 @@ public class OVRPlayerController : OVRComponent
 				OVRGamepadController.GPC_GetAxis((int)OVRGamepadController.Axis.LeftXAxis);
 				
 				if(leftAxisY > 0.0f)
-		    		MoveThrottle += leftAxisY *
+			  			MoveThrottle += leftAxisY *
 					DirXform.TransformDirection(Vector3.forward * moveInfluence);
 				
 				if(leftAxisY < 0.0f)
-		    		MoveThrottle += Mathf.Abs(leftAxisY) *		
+			  			MoveThrottle += Mathf.Abs(leftAxisY) *		
 					DirXform.TransformDirection(Vector3.back * moveInfluence) * BackAndSideDampen;
 				
 				if(leftAxisX < 0.0f)
-		    		MoveThrottle += Mathf.Abs(leftAxisX) *
+			  			MoveThrottle += Mathf.Abs(leftAxisX) *
 					DirXform.TransformDirection(Vector3.left * moveInfluence) * BackAndSideDampen;
 				
 				if(leftAxisX > 0.0f)
 					MoveThrottle += leftAxisX *
 					DirXform.TransformDirection(Vector3.right * moveInfluence) * BackAndSideDampen;
-
 			}
 			
 			float rightAxisX = 
@@ -305,11 +382,10 @@ public class OVRPlayerController : OVRComponent
 			
 			// Rotate
 			//YRotation += rightAxisX * rotateInfluence;
-		}
-		
-		// Update cameras direction and rotation
-		SetCameras();
 
+			// Update cameras direction and rotation
+			SetCameras();
+		}	
 	}
 
 	// UpdatePlayerControllerRotation
@@ -398,5 +474,34 @@ public class OVRPlayerController : OVRComponent
 	{
 		RotationScaleMultiplier = rotationScaleMultiplier;
 	}
+	/*
+   void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info) {
+   		Debug.Log("JADA!");
+    	if (stream.isWriting) {
+			float mF = 0;
+			float mB = 0;
+			
+			if(currentServerMoveForward) mF = 1;
+			if(currentServerMoveBack) mB = 1;
+
+        	Vector3 movement = new Vector3(mF,mB,0);
+        	stream.Serialize(ref movement);
+    	} else {
+        	Vector3 movementReceived = Vector3.zero;
+        	stream.Serialize(ref movementReceived);
+			if(movementReceived[0] == 1) {
+				currentServerMoveForward = true;
+			} else {
+				currentServerMoveForward = false;
+			}
+			
+			if(movementReceived[1] == 1){
+				currentServerMoveBack = true;
+			} else {
+				currentServerMoveBack = false;
+			}
+    	}
+	}
+	*/
 }
 
