@@ -1,18 +1,18 @@
 ﻿
 
 
-if balanceboard.Weightfront > balanceboard.Weight * 0.5 and  balanceboard.Weight > 20 then key.w = true
-if balanceboard.Weightfront <= balanceboard.Weight * 0.5 or balanceboard.Weight < 20 then key.w = false
+if balanceboard.Weightleft > balanceboard.Weight * 0.6 and  balanceboard.Weight > 20 then key.w = true
+if balanceboard.Weightleft <= balanceboard.Weight * 0.6 or balanceboard.Weight < 20 then key.w = false
 
-if balanceboard.Weightleft > balanceboard.Weight * 0.7 and balanceboard.Weight > 20 then mouse.DirectInputX -= 6
+if balanceboard.Weightback > balanceboard.Weight * 0.7 and balanceboard.Weight > 20 then mouse.DirectInputX -= 1
 //if balanceboard.Weightleft <= balanceboard.Weight * 0.7 or balanceboard.Weight < 20 then key.q = false
 
-if balanceboard.Weightback > balanceboard.Weight * 0.8 and balanceboard.Weight > 20 then key.S = true
-if balanceboard.Weightback <= balanceboard.Weight * 0.8 or balanceboard.Weight < 20 then key.S = false
+if balanceboard.Weightright > balanceboard.Weight * 0.6 and balanceboard.Weight > 20 then key.S = true
+if balanceboard.Weightright <= balanceboard.Weight * 0.6 or balanceboard.Weight < 20 then key.S = false
 
-if balanceboard.Weightright > balanceboard.Weight * 0.7 and balanceboard.Weight > 20 then mouse.DirectInputX += 6
+if balanceboard.Weightfront > balanceboard.Weight * 0.5 and balanceboard.Weight > 20 then mouse.DirectInputX += 1
 //if balanceboard.Weightright <= balanceboard.Weight * 0.7 or balanceboard.Weight < 20 then key.e = false
 
 
 
-debug = "BB= " + BalanceBoard.Exists + "Front=" + BalanceBoard.WeightFront + " Back=" + BalanceBoard.WeightBack + " Left=" + BalanceBoard.WeightLeft + " Right=" + BalanceBoard.WeightRight + " Total=" + BalanceBoard.Weight
+debug = "BB= " + BalanceBoard.Exists + " Front=" + BalanceBoard.WeightFront + " Back=" + BalanceBoard.WeightBack + " Left=" + BalanceBoard.WeightLeft + " Right=" + BalanceBoard.WeightRight + " Total=" + BalanceBoard.Weight

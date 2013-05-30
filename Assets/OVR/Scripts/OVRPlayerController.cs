@@ -223,6 +223,8 @@ public class OVRPlayerController : OVRComponent
 			if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 				moveInfluence *= 2.0f;
 			
+			moveInfluence *= 2.0f;
+			
 			if(DirXform != null)
 			{
 				if (moveForward)
