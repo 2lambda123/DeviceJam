@@ -1,0 +1,1059 @@
+fileFormatVersion: 2
+guid: ce0224a9ded51b54a830a21583ff8a3b
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Arm_Stretch_group
+    100002: Body_geo
+    100004: Body_geoBase1
+    100006: Brow_Dn
+    100008: Brow_Up
+    100010: BS_group
+    100012: BS_Master
+    100014: curve_Spine
+    100016: Geo_group
+    100018: Hat_geo
+    100020: Head_constraint_group_geo
+    100022: Head_geo_group
+    100024: HeadPhone
+    100026: Headphone_geo
+    100028: Inner_Head_geo_group
+    100030: L_blink
+    100032: L_Brow_In
+    100034: L_Brow_Mid
+    100036: L_Brow_Out
+    100038: L_Cnr_Mouth_Dn
+    100040: L_Cnr_Mouth_Up
+    100042: L_Eye_geo
+    100044: L_Eye_group
+    100046: L_Lwr_Lip_Dn
+    100048: L_Narrow
+    100050: L_Side_BS_group
+    100052: L_Sneer
+    100054: L_Squint
+    100056: L_Upr_Lip_Up
+    100058: L_Wide
+    100060: L_Wide_Eye
+    100062: Leg_Stretch_group
+    100064: loc_group
+    100066: loc_L_Arm_Stretch_Up
+    100068: loc_L_Arm_Stretch_Wrist
+    100070: loc_L_Leg_Stretch_Ankle
+    100072: loc_L_Leg_Stretch_Up
+    100074: loc_R_Arm_Stretch_Up
+    100076: loc_R_Arm_Stretch_Wrist
+    100078: loc_R_Leg_Stretch_Ankle
+    100080: loc_R_Leg_Stretch_Up
+    100082: loc_Stretch_group
+    100084: Lwr_Lip_Dn
+    100086: Lwr_Lip_In
+    100088: Lwr_Lip_Out
+    100090: Lwr_Teeth
+    100092: Nose_Flare
+    100094: Other_group
+    100096: R_blink
+    100098: R_Brow_In
+    100100: R_Brow_Mid
+    100102: R_Brow_Out
+    100104: R_Cnr_Mouth_Dn
+    100106: R_Cnr_Mouth_Up
+    100108: R_Eye_geo
+    100110: R_Eye_group
+    100112: R_Lwr_Lip_Dn
+    100114: R_Narrow
+    100116: R_Side_BS_group
+    100118: R_Sneer
+    100120: R_Squint
+    100122: R_Upr_Lip_Up
+    100124: R_Wide
+    100126: R_Wide_Eye
+    100128: rainbowMan_v6:head
+    100130: rainbowMan_v6:hip_center
+    100132: rainbowMan_v6:left_ankle
+    100134: rainbowMan_v6:left_collar
+    100136: rainbowMan_v6:left_elbow
+    100138: rainbowMan_v6:left_fingers
+    100140: rainbowMan_v6:left_foot
+    100142: rainbowMan_v6:left_hand
+    100144: rainbowMan_v6:left_hip
+    100146: rainbowMan_v6:left_knee
+    100148: rainbowMan_v6:left_shoulder
+    100150: rainbowMan_v6:left_thigh
+    100152: rainbowMan_v6:left_wrist
+    100154: rainbowMan_v6:neck
+    100156: rainbowMan_v6:right_ankle
+    100158: rainbowMan_v6:right_collar
+    100160: rainbowMan_v6:right_elbow
+    100162: rainbowMan_v6:right_fingers
+    100164: rainbowMan_v6:right_foot
+    100166: rainbowMan_v6:right_hand
+    100168: rainbowMan_v6:right_hip
+    100170: rainbowMan_v6:right_knee
+    100172: rainbowMan_v6:right_shoulder
+    100174: rainbowMan_v6:right_thigh
+    100176: rainbowMan_v6:right_wrist
+    100178: rainbowMan_v6:root_joint
+    100180: rainbowMan_v6:skeleton
+    100182: rainbowMan_v6:spine
+    100184: //RootNode
+    100186: ScoutRig_group
+    100188: Talker
+    100190: Tongue_GEO
+    100192: Upr_Lip_In
+    100194: Upr_Lip_Out
+    100196: Upr_Lip_Up
+    100198: Upr_Teeth
+    400000: Arm_Stretch_group
+    400002: Body_geo
+    400004: Body_geoBase1
+    400006: Brow_Dn
+    400008: Brow_Up
+    400010: BS_group
+    400012: BS_Master
+    400014: curve_Spine
+    400016: Geo_group
+    400018: Hat_geo
+    400020: Head_constraint_group_geo
+    400022: Head_geo_group
+    400024: HeadPhone
+    400026: Headphone_geo
+    400028: Inner_Head_geo_group
+    400030: L_blink
+    400032: L_Brow_In
+    400034: L_Brow_Mid
+    400036: L_Brow_Out
+    400038: L_Cnr_Mouth_Dn
+    400040: L_Cnr_Mouth_Up
+    400042: L_Eye_geo
+    400044: L_Eye_group
+    400046: L_Lwr_Lip_Dn
+    400048: L_Narrow
+    400050: L_Side_BS_group
+    400052: L_Sneer
+    400054: L_Squint
+    400056: L_Upr_Lip_Up
+    400058: L_Wide
+    400060: L_Wide_Eye
+    400062: Leg_Stretch_group
+    400064: loc_group
+    400066: loc_L_Arm_Stretch_Up
+    400068: loc_L_Arm_Stretch_Wrist
+    400070: loc_L_Leg_Stretch_Ankle
+    400072: loc_L_Leg_Stretch_Up
+    400074: loc_R_Arm_Stretch_Up
+    400076: loc_R_Arm_Stretch_Wrist
+    400078: loc_R_Leg_Stretch_Ankle
+    400080: loc_R_Leg_Stretch_Up
+    400082: loc_Stretch_group
+    400084: Lwr_Lip_Dn
+    400086: Lwr_Lip_In
+    400088: Lwr_Lip_Out
+    400090: Lwr_Teeth
+    400092: Nose_Flare
+    400094: Other_group
+    400096: R_blink
+    400098: R_Brow_In
+    400100: R_Brow_Mid
+    400102: R_Brow_Out
+    400104: R_Cnr_Mouth_Dn
+    400106: R_Cnr_Mouth_Up
+    400108: R_Eye_geo
+    400110: R_Eye_group
+    400112: R_Lwr_Lip_Dn
+    400114: R_Narrow
+    400116: R_Side_BS_group
+    400118: R_Sneer
+    400120: R_Squint
+    400122: R_Upr_Lip_Up
+    400124: R_Wide
+    400126: R_Wide_Eye
+    400128: rainbowMan_v6:head
+    400130: rainbowMan_v6:hip_center
+    400132: rainbowMan_v6:left_ankle
+    400134: rainbowMan_v6:left_collar
+    400136: rainbowMan_v6:left_elbow
+    400138: rainbowMan_v6:left_fingers
+    400140: rainbowMan_v6:left_foot
+    400142: rainbowMan_v6:left_hand
+    400144: rainbowMan_v6:left_hip
+    400146: rainbowMan_v6:left_knee
+    400148: rainbowMan_v6:left_shoulder
+    400150: rainbowMan_v6:left_thigh
+    400152: rainbowMan_v6:left_wrist
+    400154: rainbowMan_v6:neck
+    400156: rainbowMan_v6:right_ankle
+    400158: rainbowMan_v6:right_collar
+    400160: rainbowMan_v6:right_elbow
+    400162: rainbowMan_v6:right_fingers
+    400164: rainbowMan_v6:right_foot
+    400166: rainbowMan_v6:right_hand
+    400168: rainbowMan_v6:right_hip
+    400170: rainbowMan_v6:right_knee
+    400172: rainbowMan_v6:right_shoulder
+    400174: rainbowMan_v6:right_thigh
+    400176: rainbowMan_v6:right_wrist
+    400178: rainbowMan_v6:root_joint
+    400180: rainbowMan_v6:skeleton
+    400182: rainbowMan_v6:spine
+    400184: //RootNode
+    400186: ScoutRig_group
+    400188: Talker
+    400190: Tongue_GEO
+    400192: Upr_Lip_In
+    400194: Upr_Lip_Out
+    400196: Upr_Lip_Up
+    400198: Upr_Teeth
+    4300000: Body_geo
+    4300002: Upr_Teeth
+    4300004: Lwr_Teeth
+    4300006: L_Eye_geo
+    4300008: R_Eye_geo
+    4300010: Tongue_GEO
+    4300012: HeadPhone
+    4300014: Talker
+    4300016: Hat_geo
+    4300018: BS_Master
+    4300020: Brow_Dn
+    4300022: Brow_Up
+    4300024: Nose_Flare
+    4300026: Upr_Lip_Up
+    4300028: Lwr_Lip_Dn
+    4300030: Upr_Lip_In
+    4300032: Upr_Lip_Out
+    4300034: Lwr_Lip_In
+    4300036: Lwr_Lip_Out
+    4300038: R_Lwr_Lip_Dn
+    4300040: R_Upr_Lip_Up
+    4300042: R_Cnr_Mouth_Dn
+    4300044: R_Cnr_Mouth_Up
+    4300046: R_Sneer
+    4300048: R_Narrow
+    4300050: R_Wide
+    4300052: R_Brow_Out
+    4300054: R_Brow_Mid
+    4300056: R_Brow_In
+    4300058: R_Wide_Eye
+    4300060: R_Squint
+    4300062: R_blink
+    4300064: L_blink
+    4300066: L_Squint
+    4300068: L_Wide_Eye
+    4300070: L_Brow_In
+    4300072: L_Brow_Mid
+    4300074: L_Brow_Out
+    4300076: L_Wide
+    4300078: L_Narrow
+    4300080: L_Sneer
+    4300082: L_Cnr_Mouth_Up
+    4300084: L_Cnr_Mouth_Dn
+    4300086: L_Upr_Lip_Up
+    4300088: L_Lwr_Lip_Dn
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body_geo
+    13700002: Brow_Dn
+    13700004: Brow_Up
+    13700006: BS_Master
+    13700008: Hat_geo
+    13700010: HeadPhone
+    13700012: L_blink
+    13700014: L_Brow_In
+    13700016: L_Brow_Mid
+    13700018: L_Brow_Out
+    13700020: L_Cnr_Mouth_Dn
+    13700022: L_Cnr_Mouth_Up
+    13700024: L_Eye_geo
+    13700026: L_Lwr_Lip_Dn
+    13700028: L_Narrow
+    13700030: L_Sneer
+    13700032: L_Squint
+    13700034: L_Upr_Lip_Up
+    13700036: L_Wide
+    13700038: L_Wide_Eye
+    13700040: Lwr_Lip_Dn
+    13700042: Lwr_Lip_In
+    13700044: Lwr_Lip_Out
+    13700046: Lwr_Teeth
+    13700048: Nose_Flare
+    13700050: R_blink
+    13700052: R_Brow_In
+    13700054: R_Brow_Mid
+    13700056: R_Brow_Out
+    13700058: R_Cnr_Mouth_Dn
+    13700060: R_Cnr_Mouth_Up
+    13700062: R_Eye_geo
+    13700064: R_Lwr_Lip_Dn
+    13700066: R_Narrow
+    13700068: R_Sneer
+    13700070: R_Squint
+    13700072: R_Upr_Lip_Up
+    13700074: R_Wide
+    13700076: R_Wide_Eye
+    13700078: Talker
+    13700080: Tongue_GEO
+    13700082: Upr_Lip_In
+    13700084: Upr_Lip_Out
+    13700086: Upr_Lip_Up
+    13700088: Upr_Teeth
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: rainbowMan_v6:root_joint
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:left_thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:right_thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:left_knee
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:right_knee
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:left_ankle
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:right_ankle
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:hip_center
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:spine
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:left_collar
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:right_collar
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:left_shoulder
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:right_shoulder
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:left_elbow
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:right_elbow
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:left_wrist
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:right_wrist
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:left_foot
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    - boneName: rainbowMan_v6:right_foot
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        preQ: {x: 0, y: 0, z: 0, w: 0}
+        postQ: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Scout(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rainbowMan_v6:skeleton
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 2.93349028, y: 3.0437758, z: 1}
+      transformModified: 1
+    - name: rainbowMan_v6:root_joint
+      position: {x: -1.34145945e-16, y: 16.0670681, z: 0}
+      rotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rainbowMan_v6:hip_center
+      position: {x: 0, y: 0, z: -1.32348898e-23}
+      rotation: {x: 0, y: 5.69924836e-18, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rainbowMan_v6:spine
+      position: {x: -2.00000596, y: -2.38414799e-07, z: .00110180373}
+      rotation: {x: .707106829, y: -2.66789539e-05, z: 2.66368061e-05, w: .707106769}
+      scale: {x: 1.00000167, y: 1.00000119, z: 1.00000012}
+      transformModified: 1
+    - name: rainbowMan_v6:left_collar
+      position: {x: -4.07403755, y: -.000794536318, z: .709061444}
+      rotation: {x: -.495374709, y: .504582942, z: .504545569, w: .495412678}
+      scale: {x: 1.0000037, y: 1.00000417, z: .999998927}
+      transformModified: 1
+    - name: rainbowMan_v6:left_shoulder
+      position: {x: -1.26958382, y: .385413796, z: 4.1206107e-08}
+      rotation: {x: -.00291019119, y: -.00138424395, z: -.181685373, w: .983351469}
+      scale: {x: 1.02316749, y: 1.00340295, z: 1.03370547}
+      transformModified: 1
+    - name: rainbowMan_v6:left_elbow
+      position: {x: -4.50868607, y: -1.87486815, z: -.18834278}
+      rotation: {x: -.643480539, y: -.291625381, z: .28829059, w: .646355987}
+      scale: {x: 1.02571619, y: 1.05564976, z: .927044988}
+      transformModified: 1
+    - name: rainbowMan_v6:left_wrist
+      position: {x: -5.11075592, y: -.264679581, z: 3.28544784}
+      rotation: {x: .690723777, y: .140388891, z: -.136323124, w: .696137667}
+      scale: {x: .990853727, y: 1.00982583, z: 1.00000155}
+      transformModified: 1
+    - name: rainbowMan_v6:left_hand
+      position: {x: -1.62125301, y: -.00649832422, z: -.000359209487}
+      rotation: {x: 3.24429905e-08, y: -2.38209186e-08, z: .344129562, w: .938922226}
+      scale: {x: 1.03292191, y: .989904463, z: .999998689}
+      transformModified: 1
+    - name: rainbowMan_v6:left_fingers
+      position: {x: -1.35650849, y: -.0447897166, z: -.000157511458}
+      rotation: {x: 2.99637937e-09, y: -1.32273028e-08, z: -.925053179, w: .379837722}
+      scale: {x: 1.3447963, y: .749857068, z: 1.00000155}
+      transformModified: 1
+    - name: rainbowMan_v6:neck
+      position: {x: -4.97571087, y: -.000727167178, z: 8.80197604e-07}
+      rotation: {x: -.984931886, y: .172545925, z: -.00756518729, w: -.00893894956}
+      scale: {x: 5.58238411, y: 14.0520439, z: 1.00841546}
+      transformModified: 1
+    - name: rainbowMan_v6:head
+      position: {x: -1278.12781, y: 131.764023, z: -87.504158}
+      rotation: {x: .40690133, y: -.586975694, z: .405528247, w: .570471525}
+      scale: {x: .993747056, y: .0232897494, z: 24.7626095}
+      transformModified: 1
+    - name: rainbowMan_v6:right_collar
+      position: {x: -4.07397366, y: -.000794712163, z: -.709059536}
+      rotation: {x: -.47933796, y: .519841433, z: -.519805372, w: -.47937721}
+      scale: {x: 1.0000602, y: 1.00009441, z: .999997318}
+      transformModified: 1
+    - name: rainbowMan_v6:right_shoulder
+      position: {x: -1.22012305, y: -.127842531, z: 1.76516849e-07}
+      rotation: {x: .00122370746, y: .0111815576, z: .0365702994, w: .999267817}
+      scale: {x: .9983567, y: 1.00181293, z: 1.01003039}
+      transformModified: 1
+    - name: rainbowMan_v6:right_elbow
+      position: {x: -4.85149527, y: .710465491, z: .207322955}
+      rotation: {x: -.00144908507, y: -.0180071481, z: .042824246, w: .998919368}
+      scale: {x: .984698176, y: .998987615, z: 1.05000174}
+      transformModified: 1
+    - name: rainbowMan_v6:right_wrist
+      position: {x: -3.78928971, y: 1.17029071, z: -.180102199}
+      rotation: {x: .00326099829, y: .0158633646, z: -.0777278244, w: .9968431}
+      scale: {x: .99187243, y: 1.00002706, z: 1.01703513}
+      transformModified: 1
+    - name: rainbowMan_v6:right_hand
+      position: {x: -2.35099697, y: .00741692586, z: -.0042342348}
+      rotation: {x: 3.0240038e-08, y: 1.24346986e-08, z: .319464445, w: .947598338}
+      scale: {x: .996829569, y: 1.00497437, z: 1.00000024}
+      transformModified: 1
+    - name: rainbowMan_v6:right_fingers
+      position: {x: -1.8832345, y: .0566518866, z: -.00260658911}
+      rotation: {x: -2.5906699e-08, y: 3.30500605e-09, z: .404173702, w: .914682269}
+      scale: {x: .969975233, y: 1.0301168, z: 1.00000012}
+      transformModified: 1
+    - name: rainbowMan_v6:left_hip
+      position: {x: 0, y: 0, z: -3.97046694e-23}
+      rotation: {x: 0, y: 7.97894779e-18, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rainbowMan_v6:left_thigh
+      position: {x: 2.17016268, y: -1.67137301, z: -7.36067264e-17}
+      rotation: {x: 0, y: 1, z: 6.12323426e-17, w: -2.01172327e-17}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rainbowMan_v6:left_knee
+      position: {x: -6.15553904, y: -.335084319, z: -1.06038749}
+      rotation: {x: -.713336825, y: -.0562115237, z: .0447713546, w: -.697127283}
+      scale: {x: .929056942, y: 1.31316435, z: .999912798}
+      transformModified: 1
+    - name: rainbowMan_v6:left_ankle
+      position: {x: -7.66155195, y: 1.49517262, z: -.0460279621}
+      rotation: {x: .751164079, y: .660088718, z: .00430304836, w: .00411094865}
+      scale: {x: 1.06304514, y: 1.02274191, z: .999236643}
+      transformModified: 1
+    - name: rainbowMan_v6:left_foot
+      position: {x: -6.18355846, y: 1.72334945, z: -1.15341532}
+      rotation: {x: .556384385, y: .423696786, z: .431457251, w: .569879115}
+      scale: {x: .880645275, y: .998935401, z: 1.073596}
+      transformModified: 1
+    - name: rainbowMan_v6:right_hip
+      position: {x: -1.90734886e-06, y: 4.99590499e-07, z: 1.05147434e-22}
+      rotation: {x: -.308829635, y: .951117456, z: 5.823914e-17, w: -1.89103547e-17}
+      scale: {x: .999688625, y: 1.000934, z: 1}
+      transformModified: 1
+    - name: rainbowMan_v6:right_thigh
+      position: {x: -2.64449501, y: .046603024, z: 3.34683e-17}
+      rotation: {x: .308829635, y: -.951117456, z: -5.84964858e-17, w: -6.10117749e-18}
+      scale: {x: .983147264, y: 1.01685286, z: .999999762}
+      transformModified: 1
+    - name: rainbowMan_v6:right_knee
+      position: {x: 6.1294136, y: .364197701, z: 1.07790852}
+      rotation: {x: .0593601093, y: -.719203234, z: .691111028, w: .0398600064}
+      scale: {x: .931487203, y: 1.30129135, z: .99975431}
+      transformModified: 1
+    - name: rainbowMan_v6:right_ankle
+      position: {x: -8.04415131, y: 1.51510572, z: .0885693803}
+      rotation: {x: .739721596, y: .672639966, z: -.000705556769, w: -.0191565063}
+      scale: {x: 1.08502746, y: .997365117, z: .994452596}
+      transformModified: 1
+    - name: rainbowMan_v6:right_foot
+      position: {x: -6.38852406, y: 1.63770306, z: 1.10375988}
+      rotation: {x: .436013252, y: -.551860452, z: -.558670759, w: .439578921}
+      scale: {x: .903625369, y: .999501526, z: 1.05930412}
+      transformModified: 1
+    - name: ScoutRig_group
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Geo_group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Body_geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Body_geoBase1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Head_geo_group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: BS_group
+      position: {x: -23.0494423, y: 85.8803177, z: 2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Brow_Dn
+      position: {x: -53.5257301, y: -76.8606415, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Brow_Up
+      position: {x: -33.0838852, y: -76.8606415, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: BS_Master
+      position: {x: 5.47407246, y: -84.1966934, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Side_BS_group
+      position: {x: -28.1323185, y: 38.4740829, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_blink
+      position: {x: -27.6731186, y: -49.4419479, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Brow_In
+      position: {x: -27.9354763, y: -63.6439476, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Brow_Mid
+      position: {x: -36.2918549, y: -63.6439476, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Brow_Out
+      position: {x: -44.5486717, y: -63.6439476, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Cnr_Mouth_Dn
+      position: {x: -27.430666, y: -99.4419479, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Cnr_Mouth_Up
+      position: {x: -37.3145828, y: -99.4419479, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Lwr_Lip_Dn
+      position: {x: -46.3004494, y: -99.3158951, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Narrow
+      position: {x: -28.4281044, y: -86.4672775, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Sneer
+      position: {x: -19.5691509, y: -77.5957031, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Squint
+      position: {x: -36.0054207, y: -49.4419479, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Upr_Lip_Up
+      position: {x: -46.1770782, y: -86.5314941, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Wide
+      position: {x: -37.7473869, y: -86.4672775, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Wide_Eye
+      position: {x: -44.2170219, y: -49.4419479, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lwr_Lip_Dn
+      position: {x: -51.6218529, y: -89.3676987, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lwr_Lip_In
+      position: {x: -43.0516586, y: -89.299469, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lwr_Lip_Out
+      position: {x: -34.8903236, y: -89.299469, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Nose_Flare
+      position: {x: -42.8539352, y: -75.1642303, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Side_BS_group
+      position: {x: -8.72063255, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_blink
+      position: {x: -25.6166611, y: -11.2901077, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Brow_In
+      position: {x: -25.7510815, y: -25.7065868, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Brow_Mid
+      position: {x: -16.9649067, y: -25.7065868, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Brow_Out
+      position: {x: -6.33085632, y: -25.7065868, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Cnr_Mouth_Dn
+      position: {x: -23.2333488, y: -61.568203, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Cnr_Mouth_Up
+      position: {x: -14.4865189, y: -61.568203, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Lwr_Lip_Dn
+      position: {x: -5.55844641, y: -61.568203, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Narrow
+      position: {x: -22.6341496, y: -47.9386101, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Sneer
+      position: {x: -29.8594627, y: -39.9418945, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Squint
+      position: {x: -16.624979, y: -11.2901077, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Upr_Lip_Up
+      position: {x: -5.55844641, y: -47.9386101, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Wide
+      position: {x: -14.7327538, y: -47.9386101, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Wide_Eye
+      position: {x: -6.84548426, y: -11.2901077, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Upr_Lip_In
+      position: {x: -43.3694, y: -105.573051, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Upr_Lip_Out
+      position: {x: -35.5266495, y: -105.573051, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Upr_Lip_Up
+      position: {x: -51.4185524, y: -105.573051, z: -2.25740194}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Head_constraint_group_geo
+      position: {x: -7.11547488e-12, y: 4.26325641e-14, z: 3.26405569e-12}
+      rotation: {x: -1.92346139e-14, y: -1.11022302e-16, z: -5.42066392e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Hat_geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Headphone_geo
+      position: {x: -.999934912, y: 76.3002167, z: 4.27994967}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: HeadPhone
+      position: {x: .999934912, y: -76.3002167, z: -4.27994967}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Talker
+      position: {x: 7.11547488e-12, y: -4.26325641e-14, z: -3.26405569e-12}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Inner_Head_geo_group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Eye_group
+      position: {x: -7.55662199e-12, y: -1.56319402e-13, z: 6.79722945e-12}
+      rotation: {x: 0, y: -2.22044605e-16, z: -5.55111512e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: L_Eye_geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lwr_Teeth
+      position: {x: -.482690811, y: 0, z: 3.10862447e-15}
+      rotation: {x: -1.11022302e-16, y: -1.66533454e-16, z: 2.77555756e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Eye_group
+      position: {x: -7.55728813e-12, y: -1.70530257e-13, z: 6.79722945e-12}
+      rotation: {x: 0, y: -2.22044605e-16, z: -5.55111512e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: R_Eye_geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Tongue_GEO
+      position: {x: -.482690811, y: -1.27897692e-13, z: 3.50475204e-12}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Upr_Teeth
+      position: {x: -.482690811, y: 2.84217094e-14, z: 8.8817842e-16}
+      rotation: {x: 6.8278716e-15, y: -0, z: 1.11022302e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Other_group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: curve_Spine
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: loc_group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: loc_Stretch_group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Arm_Stretch_group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: loc_L_Arm_Stretch_Up
+      position: {x: -5.90098333, y: 65.9905853, z: -.546073258}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: loc_L_Arm_Stretch_Wrist
+      position: {x: -28.302412, y: 64.4647751, z: -.936668754}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: loc_R_Arm_Stretch_Up
+      position: {x: 6.45706797, y: 65.9338989, z: -.526646674}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: loc_R_Arm_Stretch_Wrist
+      position: {x: 28.4447746, y: 64.2838364, z: -.874629021}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Leg_Stretch_group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: loc_L_Leg_Stretch_Ankle
+      position: {x: -6.1584053, y: 3.43549418, z: -2.50239348}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: loc_L_Leg_Stretch_Up
+      position: {x: -4.71148157, y: 44.0643501, z: -.179819509}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: loc_R_Leg_Stretch_Ankle
+      position: {x: 6.16663408, y: 3.39033842, z: -1.48423934}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: loc_R_Leg_Stretch_Up
+      position: {x: 4.60899591, y: 44.0346298, z: -.169630274}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 3
+  userData: 

@@ -182,12 +182,15 @@ public class KinectModelControllerV2 : MonoBehaviour {
 	
 	void RotateJoint(int bone) {
 		//if blendWeight is 0 there is no need to compute the rotations
-		if( blendWeight <= 0 ){ return; }
+		if( blendWeight <= 0 )
+		{ 
+			return; 
+		}
 		Vector3 upDir = new Vector3();
 		Vector3 rightDir = new Vector3();
 		if(bone == (int)Kinect.NuiSkeletonPositionIndex.Spine)
 		{
-			upDir = ((Hip_Left.transform.position + Hip_Right.transform.position) / 2F) - Hip_Override.transform.position;
+			upDir = ((Hip_Left.transform.position + Hip_Right.transform.position) / 2.0F) - Hip_Override.transform.position;
 			rightDir = Hip_Right.transform.position - Hip_Left.transform.position;
 		}
 		
@@ -213,7 +216,9 @@ public class KinectModelControllerV2 : MonoBehaviour {
 			if(bone == (int)Kinect.NuiSkeletonPositionIndex.HipLeft)
 			{
 				//target = vector from hip_center to average of hips left and right
-				target = ((sw.bonePos[player,(int)Kinect.NuiSkeletonPositionIndex.HipLeft] + sw.bonePos[player,(int)Kinect.NuiSkeletonPositionIndex.HipRight]) / 2F) - sw.bonePos[player,(int)Kinect.NuiSkeletonPositionIndex.HipCenter];
+				target = ((sw.bonePos[player,(int)Kinect.NuiSkeletonPositionIndex.HipLeft] + 
+							sw.bonePos[player,(int)Kinect.NuiSkeletonPositionIndex.HipRight]) / 2.0F)
+						- sw.bonePos[player,(int)Kinect.NuiSkeletonPositionIndex.HipCenter];
 			}
 			//otherwise it is one of the shoulders
 			else
@@ -251,7 +256,8 @@ public class KinectModelControllerV2 : MonoBehaviour {
 		{
 			//rotate the hips so they face forward (determined by the hips)
 			dir = _hipRight;
-			target = sw.bonePos[player,(int)Kinect.NuiSkeletonPositionIndex.HipRight] - sw.bonePos[player,(int)Kinect.NuiSkeletonPositionIndex.HipLeft];
+			target = sw.bonePos[player,(int)Kinect.NuiSkeletonPositionIndex.HipRight] - 
+				     sw.bonePos[player,(int)Kinect.NuiSkeletonPositionIndex.HipLeft];
 			
 			target = transform.TransformDirection(target);
 			target = _bones[bone].transform.InverseTransformDirection(target);
@@ -263,7 +269,10 @@ public class KinectModelControllerV2 : MonoBehaviour {
 		//reduce the effect of the rotation using the blend parameter
 		quat = Quaternion.Lerp(Quaternion.identity, quat, blendWeight);
 		//apply the rotation to the local rotation of the bone
-		_bones[bone].transform.localRotation = _bones[bone].transform.localRotation  * quat;
+		//if(Math.Abs(quat.w)>0.0F)
+		{ 
+			_bones[bone].transform.localRotation = _bones[bone].transform.localRotation  * quat;
+		}
 		
 		if(bone == (int)Kinect.NuiSkeletonPositionIndex.Spine)
 		{

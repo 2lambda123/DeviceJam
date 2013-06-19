@@ -69,6 +69,10 @@ public class OVRPlayerController : OVRComponent
 	// STATIC VARIABLES
 	//
 	public static bool  AllowMouseRotation      = false;
+	
+	//Transform used for hand thrust fire.
+	protected Transform Hand = null;
+	protected Vector3 OldHand;
  	
 	// * * * * * * * * * * * * *
 	
@@ -106,6 +110,16 @@ public class OVRPlayerController : OVRComponent
 			if(Xforms[i].name == "ForwardDirection")
 			{
 				DirXform = Xforms[i];
+			}
+			
+			if(Xforms[i].name == "Gun")
+			{
+				Debug.Log ("Found Hand");
+				Hand = Xforms[i];
+				OldHand = Hand.position;
+			}
+			
+			if(Hand != null && DirXform != null) {
 				break;
 			}
 		}
@@ -171,6 +185,27 @@ public class OVRPlayerController : OVRComponent
 		// Update rotation using CameraController transform, possibly proving some rules for 
 		// sliding the rotation for a more natural movement and body visual
 		UpdatePlayerForwardDirTransform();
+		
+		Transform[] Xform = gameObject.GetComponentsInChildren<Transform>();
+		
+		for(int i = 0; i < Xform.Length; i++)
+		{
+			if(Xform[i].name == "Gun")
+			{
+				OldHand = new Vector3(Hand.position.x, Hand.position.y, Hand.position.z);
+				Hand.position = Xform[i].position;
+				
+				Debug.Log("Hand position: " + Hand.position.x + " " + Hand.position.y + " " + Hand.position.z);
+				Debug.Log("OldHand position: " + OldHand.x + " " + OldHand.y + " " + OldHand.z);
+				
+				if(Hand.position != OldHand)
+					Debug.Log("Different"); 
+				else if (Hand.position == OldHand)
+					Debug.Log("Same");
+				else
+					Debug.Log ("WAT?!");
+			}
+		}
 	}
 		
 	// UpdateMovement
@@ -223,7 +258,8 @@ public class OVRPlayerController : OVRComponent
 			if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 				moveInfluence *= 2.0f;
 			
-			moveInfluence *= 2.0f;
+			// Added by Johannes: Inluence movement speed.
+			moveInfluence *= 2.0f; 
 			
 			if(DirXform != null)
 			{
